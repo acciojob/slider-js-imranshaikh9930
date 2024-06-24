@@ -1,1 +1,74 @@
 /*  your css code here. If applicable */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.left-slide, .right-slide {
+    width: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left-slide .slide, .right-slide .slide {
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.left-slide .slide h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.left-slide .slide p {
+    font-size: 1.2em;
+}
+
+.right-slide .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+}
+
+.up-button {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.down-button {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
